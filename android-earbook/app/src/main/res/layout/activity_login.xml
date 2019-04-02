@@ -1,0 +1,111 @@
+<com.qmuiteam.qmui.widget.QMUIWindowInsetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_04">
+
+    <com.qmuiteam.qmui.widget.QMUITopBarLayout
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="118dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.beardedhen.androidbootstrap.BootstrapLabel
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:text="账号"
+                    app:bootstrapBrand="info" />
+
+
+                <EditText
+                    android:id="@+id/username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.beardedhen.androidbootstrap.BootstrapLabel
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:text="密码"
+                    app:bootstrapBrand="info" />
+
+
+                <EditText
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="95dp"
+            android:orientation="vertical">
+
+            <com.dd.processbutton.iml.ActionProcessButton
+                android:id="@+id/btnSignIn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="登录"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                custom:pb_colorComplete="@color/green_complete"
+                custom:pb_colorError="@color/red_error"
+                custom:pb_colorNormal="@color/blue_normal"
+                custom:pb_colorPressed="@color/blue_pressed"
+                custom:pb_colorProgress="@color/purple_progress"
+                custom:pb_textComplete="登录成功"
+                custom:pb_textError="登录失败"
+                custom:pb_textProgress="登录中..." />
+
+            <com.beardedhen.androidbootstrap.BootstrapButton
+                android:id="@+id/btnSignUp"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:text="注册"
+                android:textSize="18sp"
+                app:bootstrapBrand="secondary"
+                app:bootstrapSize="lg"
+                app:buttonMode="regular"
+                app:showOutline="false"
+                app:roundedCorners="true"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</com.qmuiteam.qmui.widget.QMUIWindowInsetLayout>
