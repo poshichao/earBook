@@ -6,7 +6,12 @@ import com.android.earBook.repository.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
+
+import javax.servlet.http.HttpServletResponse;
 
 /**
  * 用户service 实现类
@@ -29,5 +34,19 @@ public class UserServiceImpl implements UserService {
         }
 
         userRepository.save(user);
+    }
+
+    @Override
+    public void login(User user) {
+        HttpServletResponse response = ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getResponse();
+        User existUser = userRepository.findByUsername(user.getUsername());
+
+        if (existUser != null) {
+            response.setStatus(HttpStatus.UNAUTHORIZED.value());
+        } else if (!user.getPassword().equals(existUser.getPassword())) {
+            response.setStatus(HttpStatus.UNAUTHORIZED.value());
+        } else {
+            response.setStatus(HttpStatus.OK.value());
+        }
     }
 }

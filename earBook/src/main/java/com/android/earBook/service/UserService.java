@@ -6,4 +6,6 @@ import com.android.earBook.entity.User; /**
  */
 public interface UserService {
     void registered(User user);
+
+    void login(User user);
 }

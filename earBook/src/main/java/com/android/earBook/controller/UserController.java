@@ -22,4 +22,9 @@ public class UserController {
     public void registered(@RequestBody User user) {
         userService.registered(user);
     }
+
+    @PostMapping("/login")
+    public void login(@RequestBody User user) {
+        userService.login(user);
+    }
 }
