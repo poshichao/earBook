@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.qmuiteam.qmui.widget.QMUIWindowInsetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.qmuiteam.qmui.widget.QMUITopBarLayout
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true" />
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:custom="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        android:padding="20dp">
+
+        <TextureView
+            android:id="@+id/texture_preview"
+            android:layout_width="match_parent"
+            android:layout_height="400dp" />
+
+        <com.hebut.earbook.widget.FaceRectView
+            android:id="@+id/face_rect_view"
+            android:layout_width="match_parent"
+            android:layout_height="400dp" />
+
+        <com.dd.processbutton.iml.ActionProcessButton
+            android:id="@+id/btnFinish"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:text="完成"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            custom:pb_colorComplete="@color/green_complete"
+            custom:pb_colorError="@color/red_error"
+            custom:pb_colorNormal="@color/blue_normal"
+            custom:pb_colorPressed="@color/blue_pressed"
+            custom:pb_colorProgress="@color/purple_progress"
+            custom:pb_textComplete="注册成功"
+            custom:pb_textError="注册失败"
+            custom:pb_textProgress="正在注册..." />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view_person"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</com.qmuiteam.qmui.widget.QMUIWindowInsetLayout>
