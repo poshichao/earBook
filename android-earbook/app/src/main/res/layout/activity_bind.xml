@@ -22,7 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="400dp" />
 
-        <com.hebut.earbook.widget.FaceRectView
+        <com.hebut.earbook.view.widget.face.FaceRectView
             android:id="@+id/face_rect_view"
             android:layout_width="match_parent"
             android:layout_height="400dp" />

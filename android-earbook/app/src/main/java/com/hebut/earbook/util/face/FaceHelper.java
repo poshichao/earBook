@@ -5,7 +5,6 @@ import android.hardware.Camera;
 import android.util.Log;
 
 import com.hebut.earbook.model.FacePreviewInfo;
-import com.hebut.earbook.util.TrackUtil;
 import com.arcsoft.face.ErrorInfo;
 import com.arcsoft.face.FaceEngine;
 import com.arcsoft.face.FaceFeature;
